@@ -110,6 +110,10 @@ body, span, a {
 	font-size: 2rem;
 }
 
+.h3 {
+	font-size: 1.75rem;
+}
+
 .h5 {
 	font-size: 1.25rem;
 }
@@ -513,7 +517,6 @@ body, span, a {
 		.box {
 			flex-direction: row;
 			justify-content: space-between;
-			align-items: flex-start;
 		}
 
 		.left {
@@ -537,6 +540,11 @@ body, span, a {
 		display: inline-block;
 		align-self: center;
 	}
+}
+/* APP FEATURES END */
 
+/* HOW DOES IT WORK */
 
+.how .content {
+	flex-direction: column;
 }
