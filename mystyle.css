@@ -429,6 +429,9 @@ body, span, a {
 /* SHOWCASE END */
 
 /* APP FEATURES */
+.features {
+	margin-block: 4rem;
+}
 
 .heading-container {
 	margin-bottom: 2rem;
@@ -485,13 +488,55 @@ body, span, a {
 	.features-container {
 		flex-wrap: wrap;
 		flex-direction: row;
-		margin-bottom: 6rem;
 	}
 
 	.feature {
 		flex-basis: 40%;
 		flex-grow: 1;
 	}
+
+	#brand5, #brand6 {
+		display: none;
+	}
 }
 
+@media (width > 1200px) {
+	.brands {
+		margin-bottom: 4rem;
+	}
 
+	#brand5, #brand6 {
+		display: inline;
+	}
+
+	.features {
+		.box {
+			flex-direction: row;
+			justify-content: space-between;
+			align-items: flex-start;
+		}
+
+		.left {
+			width: 60%;
+		}
+
+		.heading-container {
+			width: 100%;
+		}
+
+		h2, p {
+			text-align: left;
+		}
+	}
+	
+	.features-container {
+		width: 100%;
+	}
+
+	.features-img {
+		display: inline-block;
+		align-self: center;
+	}
+
+
+}
