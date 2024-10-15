@@ -26,6 +26,10 @@
 	--text-nav-font-size: 16px;
 	--text-nav-font-weight: 600;  
 	--text-nav-line-height: 160%;
+
+	/* BUTTONS */
+	--border-radius-square: 0.5rem;
+	--border-radius-circle: 50%;
 }
 
 /* RESET */
@@ -334,7 +338,7 @@ body, span, a {
 	background-color: var(--clr-gray900);
 	padding-block: .6em;
 	justify-content: center;
-	border-radius: .5em;
+	border-radius: var(--border-radius-square);
 	padding-inline: 1em;
 	width: 100%;
 	margin: 0 auto;
@@ -350,7 +354,7 @@ body, span, a {
 	color: var(--clr-gray800);
 	box-shadow: var(--shdw-s);
 	font-size: 1.25rem;
-	border-radius: 100%;
+	border-radius: var(--border-radius-circle);
 	padding: 1rem;
 	width: fit-content;
 }
@@ -425,9 +429,6 @@ body, span, a {
 /* SHOWCASE END */
 
 /* APP FEATURES */
-.features {
-	margin: 2.5rem 1rem;
-}
 
 .heading-container {
 	margin-bottom: 2rem;
@@ -452,7 +453,7 @@ body, span, a {
 .feature-icon {
 	background-color: #F3F6FF;
 	padding: 1rem;
-	border-radius: .5em;
+	border-radius: var(--border-radius-square);
 	height: fit-content;
 
 	img {
@@ -463,6 +464,33 @@ body, span, a {
 @media (width > 768px) {
 	.brands {
 		display: flex;
+		justify-content: space-around;
+		gap: 1.5rem;
+		margin-top: 3rem;
+	}
+
+	.logo-container {
+		display: flex;
+		border: 1px solid var(--clr-gray300);
+		border-radius: var(--border-radius-square);
+		padding: 2em .5em;
+		align-content: center;
+		justify-content: center;
+	}
+
+	.heading-container {
+		margin-block: 3.5em 2.5em;
+	}
+
+	.features-container {
+		flex-wrap: wrap;
+		flex-direction: row;
+		margin-bottom: 6rem;
+	}
+
+	.feature {
+		flex-basis: 40%;
+		flex-grow: 1;
 	}
 }
 
