@@ -401,6 +401,7 @@ body, span, a {
 }
 
 @media (width > 1200px) {
+
 	.heading-container {
 		width: 40%;
 		justify-content: start;
@@ -544,7 +545,56 @@ body, span, a {
 /* APP FEATURES END */
 
 /* HOW DOES IT WORK */
+.how {
+background-color: #F3F6FF;;
+}
 
 .how .content {
 	flex-direction: column;
+	align-items: center;
+}
+
+.how-heading {
+	margin-block: 5rem 0rem;
+}
+
+.how-images {
+	margin: 3rem 3rem;
+	max-width: 300px;
+
+	img-container {
+		align-items: center;
+	}
+}
+
+.how p {
+	margin-block: 1rem 4rem;
+}
+
+@media (width > 768px) {
+	.how-images {
+		max-width: 620px;
+	}
+	
+	.img-container {
+		display: flex;
+		padding-inline: .3rem;
+	}
+
+	.how p {
+		max-width: 430px;
+	}
+}
+
+@media (width > 1200px) {
+	.how-images {
+		max-width: 1200px;
+	}
+	.img-container {
+		padding-inline: 2rem;
+	}
+
+	.how p {
+		max-width: 600px;
+	}
 }
