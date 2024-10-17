@@ -67,6 +67,10 @@ body, span, a {
 	align-items: center;
 }
 
+.fit-content {
+	max-width: fit-content;
+}
+
 .t-center {
 	text-align: center;
 }
@@ -86,6 +90,10 @@ body, span, a {
 	@media (width > 1200px){
 		display: flex;
 	} 
+}
+
+.ul-none {
+	list-style-type: none;
 }
 
 /* TYPOGRAPHY*/
@@ -290,6 +298,7 @@ body, span, a {
 .btn {
 	text-decoration: none;
 	font-size: 14px;
+	line-height: 160%;
 	font-weight: 600;
 	align-items: center;
 	padding: .5em 1.5em;
@@ -597,4 +606,64 @@ background-color: #F3F6FF;;
 	.how p {
 		max-width: 600px;
 	}
+}
+
+/* HOW DOES IT WORK? END */
+
+/* ADDITIONAL FEATURES (DESKTOP ONLY) */
+@media (width > 1200px) {
+	.features-part2 {
+		display: inline;
+
+		.content {
+			max-width: 1100px;
+			flex-wrap: wrap;
+			margin-block: 5rem;
+		}
+
+		.img-container {
+			padding: 0;
+		}
+	}
+
+	.flex-item {
+		flex: 1 0 40%;
+		align-content: center;
+	}
+
+	.item1 {
+		h3 {
+			max-width: 420px;
+		}
+
+		ul {
+			flex-direction: column;
+			gap: 0.75rem;
+			margin-block: 2rem;
+		}
+
+		li {
+			align-content: center;
+		}
+	}
+
+	.bulletpoint {
+		display: inline;
+		margin-right: .5em;
+	}
+
+	.item4 {
+		flex-direction: column;
+
+		.features {
+			flex-direction: row;
+			gap: .5rem;
+			margin-block: 2rem;
+		}
+
+		p {
+			margin-top: 1rem;
+		}
+	}
+
 }
