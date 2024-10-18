@@ -2,6 +2,7 @@
 
 :root {
     /* COLORS */
+	--clr-white: #fff;
     --clr-primary: #6366f1;
 	--clr-gray100: #F3F6FF;
 	--clr-gray200: #EFF2FC;
@@ -19,6 +20,7 @@
 	--primary-alpha-35: rgba(99, 101, 241, 0.35);
 
     /* SHADOWS */
+	--shdw-brand: 0px 8px 18px -8px rgba(99, 101, 241, 0.9); 
     --shdw-secondary: 0px 8px 18px -8px rgba(19, 16, 34, 0.2);
 	--shdw-s: 0px 4.4px 12px -1px rgba(19, 16, 34, 0.06), 0px 2px 6.4px -1px rgba(19, 16, 34, 0.03); 
 
@@ -53,6 +55,10 @@ body, span, a {
 /* UTILITY CLASSES */
 .flex {
 	display: flex;
+}
+
+.grid {
+	display: grid;
 }
 
 .block {
@@ -124,6 +130,10 @@ body, span, a {
 
 .h5 {
 	font-size: 1.25rem;
+}
+
+.h6 {
+	font-size: 1rem;
 }
 
 .text-body {
@@ -555,7 +565,7 @@ body, span, a {
 
 /* HOW DOES IT WORK */
 .how {
-background-color: #F3F6FF;;
+background-color: var(--clr-gray100);
 }
 
 .how .content {
@@ -610,15 +620,16 @@ background-color: #F3F6FF;;
 
 /* HOW DOES IT WORK? END */
 
-/* ADDITIONAL FEATURES (DESKTOP ONLY) */
+/* ADDITIONAL FEATURES AND REVIEWS (DESKTOP ONLY) */
 @media (width > 1200px) {
 	.features-part2 {
-		display: inline;
+		display: block;
 
 		.content {
 			max-width: 1100px;
 			flex-wrap: wrap;
 			margin-block: 5rem;
+			row-gap: 2.5rem;
 		}
 
 		.img-container {
@@ -627,6 +638,7 @@ background-color: #F3F6FF;;
 	}
 
 	.flex-item {
+		flex-wrap: wrap;
 		flex: 1 0 40%;
 		align-content: center;
 	}
@@ -654,6 +666,7 @@ background-color: #F3F6FF;;
 
 	.item4 {
 		flex-direction: column;
+		justify-content: center;
 
 		.features {
 			flex-direction: row;
@@ -664,6 +677,67 @@ background-color: #F3F6FF;;
 		p {
 			margin-top: 1rem;
 		}
+	}
+
+	/* REVIEWS SECTION */
+
+	.reviews {
+		display: flex;
+		background-color: var(--clr-gray100);
+	}
+	.review-content {
+		margin-block: 5rem;
+		padding: 0;
+		justify-content: space-between;
+	}
+
+	.reviews .heading-container {
+		max-width: 300px;
+		margin: 0;
+	}
+
+	.reviews-container {
+		gap: 1.5rem;
+	}
+
+	.quotation {
+		position: absolute;
+		top: -30px;
+		background-color: var(--clr-primary);
+		width: fit-content;
+		padding: .8em;
+		border-radius: .375em;
+		box-shadow: var(--shdw-brand);
+	}
+
+	.review-card {
+		position: relative;
+		background-color: var(--clr-white);
+		border-radius: var(--border-radius-square);
+		box-shadow: 0px 4.4px 12px -1px rgba(19, 16, 35, 0.06), 0px 2px 6.4px -1px rgba(19, 16, 34, 0.03);
+		max-width: 420px;
+		padding: 3rem 1.5rem 1.5rem 1.5rem;
+	}
+
+	.review {
+		padding-block: 1.5rem;
+	}
+
+	.user {
+		align-items: center;
+	}
+
+	.user-image {
+		padding-right: 1rem;
+
+		img {
+			width: 48px;
+		}
+	}
+
+	.user-title {
+		color: var(--clr-gray600);
+		line-height: 130%;
 	}
 
 }
